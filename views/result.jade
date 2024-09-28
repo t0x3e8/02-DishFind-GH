@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container.text-center
+    h1.mb-4 The analysis process is complete
+    p.text-muted.mb-4 Below are the results found
+    ul.list-group
+      each dish in data
+        li.list-group-item
+          strong Dish name: #{dish.name}
+          |  , Dish price: #{dish.price}
+
+    a.btn.btn-primary.btn-lg.mt-4(href="/") Back to Home
