@@ -13,22 +13,32 @@ This project serves as a proof of concept, demonstrating how AI can be used to e
 ## How to Run
 To run this project, follow these steps:
 
-* Clone the repository from GitHub
-* Ensure you have Docker installed on your system
-* Navigate to the project directory in your terminal
-* Build the Docker image:
+1. Clone the repository from GitHub
+2. Ensure you have Docker installed on your system
+3. Navigate to the project directory in your terminal
+4. Create a `.env` file with the following settings:
 
-  ```
-  docker build -t find_dish_site .
-  ```
+```
+ORGANIZATION=your_organization
+PROJECT=your_openai_project
+API_KEY=your_openai_api_key
+```
 
-* Run the Docker container:
+This ensures that sensitive data like the API key is not exposed in the codebase.
 
-  ```
-  docker run -p 3000:3000 find_dish_site
-  ```
-  
-* Open your web browser and go to http://localhost:3000
+5. Build the Docker image:
+
+```
+docker build -t find_dish_site .
+```
+
+6. Run the Docker container:
+
+```
+docker run -p 3000:3000 find_dish_site
+```
+
+7. Open your web browser and go to http://localhost:3000
 
 You should now see the application running and be able to upload menu images for analysis.
 
