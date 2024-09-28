@@ -19,7 +19,7 @@ To run this project, follow these steps:
 4. Create a `.env` file with the following settings:
 
 ```
-ORGANIZATION=your_organization
+ORGANIZATION=your_openai_organization
 PROJECT=your_openai_project
 API_KEY=your_openai_api_key
 ```
